@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css"  th:href="@{/css/starter-template.css}" rel="stylesheet">
+  </head>
+
+  <body>
+<div th:replace="~{block/header::headerA}"></div>
+<main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Welcome新規登録</h1>
+        </div>
+     
+
+      </main>
+      <body>
+      <body>
+<h2 th:text="${newok}"></h2>
+<form method="post" action="#" th:action="@{/customer/confirm}" th:object="${CustomerNewForm}">
+	
+	<label for="custno">Custno:</label>
+	<input id="custno" name="custno" type="text" ><br>
+	
+	
+	<label for="custname">Custname:</label>
+	<input id="custname" name="custname" type="text" ><br>
+	
+    
+    <label for="custfurigana">Custfurigana:</label>
+	<input id="custfurigana" name="custfurigana" type="text"><br>
+   
+	<label for="mailaddress">Mailaddress:</label>
+	<input id="mailaddress" name="mailaddress" type="text" ><br>
+	
+	<label for="password">Password:</label>
+	<input id="password" name="password" type="text" ><br>
+	
+    
+    <label for="birthday">Birthday:</label>
+	<input id="birthday" name="birthday" type="text" ><br>
+   
+    <label for="sex">Sex:</label>
+	<input id="sex" name="sex" type="text" ><br>
+	<br>
+	<label for="postno">Postno:</label>
+	<input id="postno" name="postno" type="text" ><br>
+    
+	<label for="address">Address:</label>
+	<textarea name="address" id="address" rows="2" cols="30"></textarea><br>
+    
+    <label for="telno">Telno:</label>
+	<input id="telno" name="telno" type="text" ><br>
+    
+	
+	<input type="submit" value="confirm">	
+	</form>
+	</body>
+</body>	
+</body>
+
+
+</html>
