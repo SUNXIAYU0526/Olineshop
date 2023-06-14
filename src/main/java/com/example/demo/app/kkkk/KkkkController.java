@@ -19,6 +19,7 @@ public class KkkkController {
 		model.addAttribute("title", "Lady");
 		return "kkkk/lady";
 	}
+	
 }
 	
 	  

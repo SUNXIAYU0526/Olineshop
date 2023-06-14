@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+<h1 th:text="${title}">仮のタイトル</h1>
+<p>入力内容をご確認ください</p>
+<div th:object="${cartForm}">
+
+<p th:text="*{comno}"></p>
+<p th:text="*{comcategory}"></p>
+<p th:text="*{comname}"></p>
+<p th:text="*{colour}"></p>
+<p th:text="*{siz}"></p>
+<p th:text="*{price}"></p>
+<p th:text="*{quantity}"></p>
+
+<form method="get" action="#" th:action="@{/commodity/commoditypage}">
+    <input type="hidden" name="comno" th:value="*{comno}">
+	<input type="hidden" name="comcategory" th:value="*{comcategory}">
+	<input type="hidden" name="comname" th:value="*{comname}">
+	<input type="hidden" name="colour" th:value="*{colour}">
+	<input type="hidden" name="siz" th:value="*{siz}">
+	<input type="hidden" name="photo" th:value="*{photo}">
+	<input type="hidden" name="price" th:value="*{price}">
+	<input type="hidden" name="quantity" th:value="*{quantity}">
+
+	<input type="submit" value="GoBack">
+</form>
+
+<form method="post" action="#" th:action="@{/commodity/cartok}">
+    <input type="hidden" name="comno" th:value="*{comno}">
+	<input type="hidden" name="comcategory" th:value="*{comcategory}">
+	<input type="hidden" name="comname" th:value="*{comname}">
+	<input type="hidden" name="colour" th:value="*{colour}">
+	<input type="hidden" name="siz" th:value="*{siz}">
+	<input type="hidden" name="photo" th:value="*{photo}">
+	<input type="hidden" name="price" th:value="*{price}">
+	<input type="hidden" name="quantity" th:value="*{quantity}">
+	
+	<input type="submit" value="Cartok">
+
+</form>
+</div>
+</body>
+</html>

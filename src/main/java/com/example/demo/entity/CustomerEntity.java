@@ -2,7 +2,7 @@ package com.example.demo.entity;
 
 import java.time.LocalDateTime;
 
-public class CustomerNew {
+public class CustomerEntity {
 	private String custno;
 	private String custname;
 	private String custfurigana;
@@ -10,11 +10,12 @@ public class CustomerNew {
 	private String password;
 	private String birthday;
 	private String sex;
+
 	private String postno;
 	private String address;
 	private String telno;
 	private LocalDateTime created;
-	public CustomerNew() {
+	public CustomerEntity() {
 	}
 	public String getCustno() {
 		return custno;
@@ -58,6 +59,7 @@ public class CustomerNew {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
+
 	public String getPostno() {
 		return postno;
 	}

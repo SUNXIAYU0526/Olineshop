@@ -24,10 +24,10 @@ public class SampleController {
 	public String test(Model model) {
 		
 		String sql = "SELECT comno, comcategory, comname "
-				+"FROM commodity WHERE comno = 1";
+				+"FROM commodity WHERE comno = 12345";
 		Map<String,Object> map = jdbcTemplate.queryForMap(sql);
 				
-		model.addAttribute("title","Commodity Form" );
+		model.addAttribute("title",map.get("comname" ) );
 		model.addAttribute("comcategory",map.get("comcategory" ));
 		model.addAttribute("comname",map.get("comname" ));
 		return "test";

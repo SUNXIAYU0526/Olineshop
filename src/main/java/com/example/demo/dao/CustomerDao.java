@@ -1,12 +1,13 @@
-package com.example.demo.service;
+package com.example.demo.dao;
 
 import java.util.List;
 
 import com.example.demo.entity.CustomerEntity;
 
-public interface CustomerNewService {
+public interface CustomerDao {
 	
-	void save(CustomerEntity customerNew);
+	void insert(CustomerEntity entity);
+	
 	
 	List<CustomerEntity> getAll();
 

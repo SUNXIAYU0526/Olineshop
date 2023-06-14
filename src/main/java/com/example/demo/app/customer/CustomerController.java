@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.demo.entity.CustomerNew;
+import com.example.demo.entity.CustomerEntity;
 import com.example.demo.service.CustomerNewService;
 
 @Controller
@@ -27,11 +27,7 @@ public class CustomerController {
 		this.customerNewService = customerNewService;
 	}
 	
-	@PostMapping("/sample/test")
-	public String test(Model model) {
-		model.addAttribute("title", "test");
-		return "cusromer/sample/test";
-	}
+	
 
 	/** customer登録画面のリンク押下*/
 	@GetMapping("/login")
@@ -51,6 +47,7 @@ public class CustomerController {
 //		}
 	
 	
+
 	
 	
 	/** */
@@ -61,7 +58,7 @@ public class CustomerController {
 	}
 	/**  新規登録画面のボタン押下*/
 	@PostMapping("/newcust")
-	public String formGoBack(CustomerLogin customerLogin, Model model) {
+	public String formGoBack( Model model) {
 		model.addAttribute("title", "Newcust");
 		return "customer/newcust";
 	}
@@ -91,7 +88,7 @@ public class CustomerController {
 			model.addAttribute("title", "CustomerNewForm");
 			return "customer/newcust";
 		}
-		CustomerNew customerNew = new CustomerNew();
+		CustomerEntity customerNew = new CustomerEntity();
 		customerNew.setCustno(customerNewForm.getCustno());
 		customerNew.setCustname(customerNewForm.getCustname());
 		customerNew.setCustfurigana(customerNewForm.getCustfurigana());
@@ -99,6 +96,7 @@ public class CustomerController {
 		customerNew.setPassword(customerNewForm.getPassword());
 		customerNew.setBirthday(customerNewForm.getBirthday());
 		customerNew.setSex(customerNewForm.getSex());
+	
 		customerNew.setPostno(customerNewForm.getPostno());
 		customerNew.setAddress(customerNewForm.getAddress());
 		customerNew.setTelno(customerNewForm.getTelno());

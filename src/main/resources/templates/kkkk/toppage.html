@@ -21,21 +21,48 @@
  
 
 <div th:replace="~{block/header::headerA}"></div>
+<div th:replace="~{block/side}"></div>
 
 <main role="main" class="container">
 
 
       <div class="starter-template">
         <h1>Welcome</h1>
-        <div th:replace="~{block/side}"></div>
+    
    </div>
    
    <body>
-
+ <div>
 	<input type="submit" value="新着商品">
+	<form method="get" action="#" th:action="@{/commodity/commoditypage}" th:object="${commoditycontroller}">
+	<input type ="image" src="/img/kids.jpg" width="200" height="200" /></form>
+	
+	</div>
+	
+	<div>
 	<input type="submit" value="人気商品">
+	<img src="/img/kids.jpg" width="200" height="200" />
+	<img src="/img/women.jpg" width="200" height="200" />
+	<img src="/img/men.jpg" width="200" height="200" />
+	</div>
+	
+	<div>
 	<input type="submit" value="SALE">
+	<img src="/img/kids.jpg" width="200" height="200" />
+	<img src="/img/women.jpg" width="200" height="200" />
+	<img src="/img/men.jpg" width="200" height="200" />
+	</div>
+	
+		<div>
 	<input type="submit" value="おススメ">
+	<img src="/img/kids.jpg" width="200" height="200" />
+	<img src="/img/women.jpg" width="200" height="200" />
+	<img src="/img/men.jpg" width="200" height="200" />
+	</div>
+	
+	
+	
+	
 	<form method="post" action="#" th:action="@{/sample/test}" th:object="${samplecontroller}">
 	<input type="submit" value="test">
 	</form>

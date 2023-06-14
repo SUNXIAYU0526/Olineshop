@@ -31,6 +31,9 @@ public class CustomerNewForm {
 	
 	@Size(min = 1, max = 100, message = "Please input 1characters")
 	private String sex;
+	
+	private String colour;
+	
 	@Size(min =7, max = 7, message = "Please input 7characters ")
 	private String postno;
 	
@@ -96,6 +99,14 @@ public class CustomerNewForm {
 		this.sex = sex;
 	}
 
+	public String getColour() {
+		return colour;
+	}
+
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+
 	public String getPostno() {
 		return postno;
 	}
@@ -119,9 +130,8 @@ public class CustomerNewForm {
 	public void setTelno(String telno) {
 		this.telno = telno;
 	}
-	
-}
 
+}
 	
 
 	
